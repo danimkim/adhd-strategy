@@ -3,25 +3,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { InteractiveChecklist } from "@/components/InteractiveChecklist";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "wouter";
+import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function ExecutionPlan() {
+  const { t } = useTranslation();
+
   const phase1Items = [
     {
       id: 'audit',
-      label: 'Code Audit (15 min)',
-      description: 'Review your project structure and identify what you\'ve built',
+      label: t('executionPlan.phase1.tasks.audit.label'),
+      description: t('executionPlan.phase1.tasks.audit.description'),
       completed: false,
     },
     {
       id: 'architecture',
-      label: 'Document Architecture (30 min)',
-      description: 'Create ARCHITECTURE.md with tech stack and component hierarchy',
+      label: t('executionPlan.phase1.tasks.architecture.label'),
+      description: t('executionPlan.phase1.tasks.architecture.description'),
       completed: false,
     },
     {
       id: 'kanban',
-      label: 'Set Up Kanban Board',
-      description: 'Create visual task management (Trello, Notion, GitHub Projects)',
+      label: t('executionPlan.phase1.tasks.kanban.label'),
+      description: t('executionPlan.phase1.tasks.kanban.description'),
       completed: false,
     },
   ];
@@ -29,23 +33,26 @@ export default function ExecutionPlan() {
   const phase2Items = [
     {
       id: 'focus-zone',
-      label: 'Design Your Focus Zone',
-      description: 'Prepare environment with sensory cues (music, scent, etc.)',
+      label: t('executionPlan.phase2.tasks.focusZone.label'),
+      description: t('executionPlan.phase2.tasks.focusZone.description'),
       completed: false,
     },
     {
       id: 'starter-quest',
-      label: 'Daily Starter Quest (25 min)',
-      description: 'Pick ONE small task from "Next Up" column and complete it',
+      label: t('executionPlan.phase2.tasks.starterQuest.label'),
+      description: t('executionPlan.phase2.tasks.starterQuest.description'),
       completed: false,
     },
     {
       id: 'weekly-retro',
-      label: 'Weekly Retro & Adjust',
-      description: 'Review what worked and what didn\'t every Friday',
+      label: t('executionPlan.phase2.tasks.weeklyRetro.label'),
+      description: t('executionPlan.phase2.tasks.weeklyRetro.description'),
       completed: false,
     },
   ];
+
+  const dailySteps = t('executionPlan.dailyRoutine.steps', { returnObjects: true }) as any[];
+  const retroItems = t('executionPlan.weeklyRetro.items', { returnObjects: true }) as any[];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -55,11 +62,13 @@ export default function ExecutionPlan() {
           <Link href="/">
             <a className="flex items-center gap-2 text-slate-600 hover:text-slate-900 transition-colors">
               <ArrowLeft className="w-5 h-5" />
-              <span>Back</span>
+              <span>{t('executionPlan.back')}</span>
             </a>
           </Link>
-          <h1 className="text-lg font-bold text-slate-900">Execution Plan</h1>
-          <div className="w-20" />
+          <h1 className="text-lg font-bold text-slate-900">{t('executionPlan.title')}</h1>
+          <div className="w-20 flex justify-end">
+            <LanguageSwitcher />
+          </div>
         </div>
       </nav>
 
@@ -67,9 +76,9 @@ export default function ExecutionPlan() {
       <section className="py-12">
         <div className="container space-y-12">
           <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Your 6-Week Roadmap</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">{t('executionPlan.title')}</h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              A structured plan to implement ADHD strategies and complete your project
+              {t('executionPlan.subtitle')}
             </p>
           </div>
 
@@ -79,14 +88,14 @@ export default function ExecutionPlan() {
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 text-white font-bold">1</div>
                 <div>
-                  <CardTitle className="text-blue-900">Foundation (Week 1)</CardTitle>
-                  <CardDescription className="text-blue-700">Set up your system and understand your project</CardDescription>
+                  <CardTitle className="text-blue-900">{t('executionPlan.phase1.title')}</CardTitle>
+                  <CardDescription className="text-blue-700">{t('executionPlan.phase1.description')}</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
               <InteractiveChecklist 
-                title="Phase 1 Tasks"
+                title={t('executionPlan.phase1.title')}
                 items={phase1Items}
               />
             </CardContent>
@@ -98,14 +107,14 @@ export default function ExecutionPlan() {
               <div className="flex items-center gap-3">
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white font-bold">2</div>
                 <div>
-                  <CardTitle className="text-green-900">Execution (Weeks 2-6)</CardTitle>
-                  <CardDescription className="text-green-700">Build momentum and complete your project</CardDescription>
+                  <CardTitle className="text-green-900">{t('executionPlan.phase2.title')}</CardTitle>
+                  <CardDescription className="text-green-700">{t('executionPlan.phase2.description')}</CardDescription>
                 </div>
               </div>
             </CardHeader>
             <CardContent>
               <InteractiveChecklist 
-                title="Phase 2 Tasks"
+                title={t('executionPlan.phase2.title')}
                 items={phase2Items}
               />
             </CardContent>
@@ -114,47 +123,25 @@ export default function ExecutionPlan() {
           {/* Daily Routine */}
           <Card>
             <CardHeader>
-              <CardTitle>Your Daily Routine</CardTitle>
-              <CardDescription>Follow this structure every day</CardDescription>
+              <CardTitle>{t('executionPlan.dailyRoutine.title')}</CardTitle>
+              <CardDescription>{t('executionPlan.dailyRoutine.subtitle')}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
-                <div className="flex gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex-shrink-0">1</div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900">Morning Setup (5 min)</h4>
-                    <p className="text-slate-600 text-sm mt-1">Activate your focus zone: music, scent, location, etc.</p>
+                {dailySteps.map((step: any, idx: number) => (
+                  <div key={idx} className="flex gap-4">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-amber-100 text-amber-700 font-bold flex-shrink-0">{idx + 1}</div>
+                    <div>
+                      <h4 className="font-semibold text-slate-900">{step.title}</h4>
+                      <p className="text-slate-600 text-sm mt-1">{step.description}</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-100 text-blue-700 font-bold flex-shrink-0">2</div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900">Starter Quest (25 min)</h4>
-                    <p className="text-slate-600 text-sm mt-1">Pick ONE micro-task from "Next Up" and complete it using Pomodoro timer</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-green-100 text-green-700 font-bold flex-shrink-0">3</div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900">Celebrate & Break (5 min)</h4>
-                    <p className="text-slate-600 text-sm mt-1">Move task to "Done". Enjoy your reward. Take a real break.</p>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-purple-100 text-purple-700 font-bold flex-shrink-0">4</div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900">Repeat or Extend (Optional)</h4>
-                    <p className="text-slate-600 text-sm mt-1">If momentum is high, do another Pomodoro. Otherwise, that's your win for today.</p>
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <p className="text-sm text-slate-700">
-                  <strong>Key Principle:</strong> This routine takes 35 minutes minimum. That's your daily commitment. Anything more is a bonus.
+                  <strong>{t('executionPlan.dailyRoutine.note')}</strong>
                 </p>
               </div>
             </CardContent>
@@ -163,30 +150,17 @@ export default function ExecutionPlan() {
           {/* Weekly Retro Template */}
           <Card>
             <CardHeader>
-              <CardTitle>Weekly Retro Template</CardTitle>
-              <CardDescription>Every Friday, ask yourself these questions</CardDescription>
+              <CardTitle>{t('executionPlan.weeklyRetro.title')}</CardTitle>
+              <CardDescription>{t('executionPlan.weeklyRetro.subtitle')}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">
-                <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-2">✅ What worked this week?</p>
-                  <p className="text-slate-600 text-sm">Which strategies helped you stay on track?</p>
-                </div>
-
-                <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-2">❌ What didn't work?</p>
-                  <p className="text-slate-600 text-sm">Where did you get stuck or lose momentum?</p>
-                </div>
-
-                <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-2">🔧 What will you adjust?</p>
-                  <p className="text-slate-600 text-sm">What change will you make next week?</p>
-                </div>
-
-                <div className="p-4 bg-slate-50 rounded-lg border border-slate-200">
-                  <p className="font-semibold text-slate-900 mb-2">📊 Progress snapshot</p>
-                  <p className="text-slate-600 text-sm">How many tasks did you complete? How do you feel?</p>
-                </div>
+                {retroItems.map((item: any, idx: number) => (
+                  <div key={idx} className="p-4 bg-slate-50 rounded-lg border border-slate-200">
+                    <p className="font-semibold text-slate-900 mb-2">{item.emoji} {item.title}</p>
+                    <p className="text-slate-600 text-sm">{item.description}</p>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
@@ -194,8 +168,8 @@ export default function ExecutionPlan() {
           {/* Energy Log Template */}
           <Card>
             <CardHeader>
-              <CardTitle>Energy Log (Track for 2 Weeks)</CardTitle>
-              <CardDescription>Identify your peak productivity times</CardDescription>
+              <CardTitle>{t('executionPlan.energyLog.title')}</CardTitle>
+              <CardDescription>{t('executionPlan.energyLog.subtitle')}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
@@ -213,23 +187,23 @@ export default function ExecutionPlan() {
                 ))}
               </div>
               <p className="text-sm text-slate-600 mt-4">
-                Once you identify your peak times, schedule complex work (debugging, new features) during those hours.
+                {t('executionPlan.energyLog.note')}
               </p>
             </CardContent>
           </Card>
 
           {/* CTA */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg p-8 text-white text-center space-y-4">
-            <h3 className="text-2xl font-bold">Ready to Start?</h3>
+            <h3 className="text-2xl font-bold">{t('executionPlan.cta.title')}</h3>
             <p className="text-blue-100 max-w-2xl mx-auto">
-              Print this page or bookmark it. Start with Phase 1 this week. You've got this.
+              {t('executionPlan.cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50">
-                Print This Plan
+                {t('executionPlan.cta.print')}
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-blue-700">
-                Share With Accountability Partner
+                {t('executionPlan.cta.share')}
               </Button>
             </div>
           </div>
@@ -239,9 +213,9 @@ export default function ExecutionPlan() {
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 mt-20">
         <div className="container text-center space-y-4">
-          <p>Built with ❤️ for ADHD developers</p>
+          <p>{t('footer.text')}</p>
           <p className="text-sm">
-            This guide is based on research-backed strategies for ADHD and executive function.
+            {t('footer.description')}
           </p>
         </div>
       </footer>

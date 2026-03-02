@@ -1,0 +1,225 @@
+{
+  "nav": {
+    "title": "ADHD Dev Strategy",
+    "strategies": "Strategies",
+    "execution": "Execution"
+  },
+  "hero": {
+    "title": "Start Your Projects.",
+    "titleHighlight": "Finish Them.",
+    "subtitle": "Practical strategies for ADHD developers to overcome project paralysis and build momentum.",
+    "cta": "Get Started",
+    "learn": "Learn More",
+    "badges": {
+      "research": "Research-backed",
+      "practical": "Practical",
+      "actionable": "Actionable"
+    }
+  },
+  "problem": {
+    "title": "Why You Can't Finish",
+    "subtitle": "The ADHD-Project Paralysis Connection",
+    "items": {
+      "dopamine": {
+        "title": "Dopamine Dysregulation",
+        "description": "Your brain prioritizes immediate rewards over long-term goals. New projects feel exciting (dopamine spike), but routine work feels impossible."
+      },
+      "executive": {
+        "title": "Executive Function Deficit",
+        "description": "Starting tasks requires more mental energy for ADHD brains. Once the initial stimulus wears off, momentum collapses."
+      },
+      "working": {
+        "title": "Working Memory Overload",
+        "description": "You lose track of what you've built, why you built it, and what comes next. Context-switching costs are extremely high."
+      },
+      "perfectionism": {
+        "title": "Perfectionism + Shame Spiral",
+        "description": "One mistake or setback triggers avoidance. You'd rather not start than risk failure. The guilt makes it worse."
+      }
+    }
+  },
+  "strategies": {
+    "title": "4 Core Strategies",
+    "subtitle": "Proven tactics to overcome ADHD project paralysis",
+    "psychological": {
+      "title": "Psychological Strategy",
+      "description": "Reframe failure as system debugging, not personal failure. Separate your worth from your productivity.",
+      "items": [
+        "Replace perfectionism with progress-ism",
+        "Treat mistakes as data, not shame",
+        "Use external accountability (not internal guilt)",
+        "Celebrate micro-wins immediately"
+      ]
+    },
+    "behavioral": {
+      "title": "Behavioral Strategy",
+      "description": "Design your work to match how your brain actually works, not how it should work.",
+      "items": [
+        "Externalize everything (write it down, don't rely on memory)",
+        "Break projects into 10-minute micro-tasks",
+        "Use Pomodoro timers (25 min focus + 5 min break)",
+        "Pair tasks with immediate rewards (dopamine pairing)"
+      ]
+    },
+    "environment": {
+      "title": "Environment Design",
+      "description": "Create sensory anchors that trigger focus mode instantly.",
+      "items": [
+        "Work outside your home (coffee shop, library, coworking)",
+        "Use consistent music/soundscapes (same playlist = focus trigger)",
+        "Add scent anchors (candle, essential oil)",
+        "Physical location = mental context switch"
+      ]
+    },
+    "execution": {
+      "title": "Execution System",
+      "description": "A structured daily routine that works WITH your ADHD brain, not against it.",
+      "items": [
+        "Daily Starter Quest (10 min minimum commitment)",
+        "Kanban board (visual task management)",
+        "Weekly retro (adjust what's not working)",
+        "Energy log (track peak productivity times)"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "Will this work if I haven't been diagnosed with ADHD?",
+        "a": "Yes. These strategies work for anyone with executive function challenges, procrastination, or project paralysis. ADHD is just one cause."
+      },
+      {
+        "q": "What if I'm already on ADHD medication?",
+        "a": "Great. Medication helps with dopamine regulation, but it doesn't replace structure. Combine medication with these strategies for best results."
+      },
+      {
+        "q": "How long until I see results?",
+        "a": "You should feel momentum shift within 2-3 weeks if you follow the system consistently. Real progress (completed projects) takes 6-8 weeks."
+      },
+      {
+        "q": "What if I fail the first week?",
+        "a": "That's not failure—that's data. Adjust your system. Maybe your Starter Quest is too big. Maybe your focus zone isn't working. Iterate."
+      },
+      {
+        "q": "Can I use this for non-coding projects?",
+        "a": "Absolutely. These strategies work for writing, design, music, any creative or technical work that requires sustained focus."
+      }
+    ]
+  },
+  "cta": {
+    "title": "You Can Finish This",
+    "subtitle": "ADHD isn't a character flaw. It's a different way your brain works. With the right system, you can build momentum and complete your projects.",
+    "button": "Start Execution Plan",
+    "share": "Share With Others"
+  },
+  "footer": {
+    "text": "Built with ❤️ for ADHD developers",
+    "description": "This guide is based on research-backed strategies for ADHD and executive function."
+  },
+  "executionPlan": {
+    "title": "Your 6-Week Roadmap",
+    "subtitle": "A structured plan to implement ADHD strategies and complete your project",
+    "phase1": {
+      "title": "Foundation (Week 1)",
+      "description": "Set up your system and understand your project",
+      "tasks": {
+        "audit": {
+          "label": "Code Audit (15 min)",
+          "description": "Review your project structure and identify what you've built"
+        },
+        "architecture": {
+          "label": "Document Architecture (30 min)",
+          "description": "Create ARCHITECTURE.md with tech stack and component hierarchy"
+        },
+        "kanban": {
+          "label": "Set Up Kanban Board",
+          "description": "Create visual task management (Trello, Notion, GitHub Projects)"
+        }
+      }
+    },
+    "phase2": {
+      "title": "Execution (Weeks 2-6)",
+      "description": "Build momentum and complete your project",
+      "tasks": {
+        "focusZone": {
+          "label": "Design Your Focus Zone",
+          "description": "Prepare environment with sensory cues (music, scent, etc.)"
+        },
+        "starterQuest": {
+          "label": "Daily Starter Quest (25 min)",
+          "description": "Pick ONE small task from \"Next Up\" column and complete it"
+        },
+        "weeklyRetro": {
+          "label": "Weekly Retro & Adjust",
+          "description": "Review what worked and what didn't every Friday"
+        }
+      }
+    },
+    "dailyRoutine": {
+      "title": "Your Daily Routine",
+      "subtitle": "Follow this structure every day",
+      "steps": [
+        {
+          "title": "Morning Setup (5 min)",
+          "description": "Activate your focus zone: music, scent, location, etc."
+        },
+        {
+          "title": "Starter Quest (25 min)",
+          "description": "Pick ONE micro-task from \"Next Up\" and complete it using Pomodoro timer"
+        },
+        {
+          "title": "Celebrate & Break (5 min)",
+          "description": "Move task to \"Done\". Enjoy your reward. Take a real break."
+        },
+        {
+          "title": "Repeat or Extend (Optional)",
+          "description": "If momentum is high, do another Pomodoro. Otherwise, that's your win for today."
+        }
+      ],
+      "note": "This routine takes 35 minutes minimum. That's your daily commitment. Anything more is a bonus."
+    },
+    "weeklyRetro": {
+      "title": "Weekly Retro Template",
+      "subtitle": "Every Friday, ask yourself these questions",
+      "items": [
+        {
+          "emoji": "✅",
+          "title": "What worked this week?",
+          "description": "Which strategies helped you stay on track?"
+        },
+        {
+          "emoji": "❌",
+          "title": "What didn't work?",
+          "description": "Where did you get stuck or lose momentum?"
+        },
+        {
+          "emoji": "🔧",
+          "title": "What will you adjust?",
+          "description": "What change will you make next week?"
+        },
+        {
+          "emoji": "📊",
+          "title": "Progress snapshot",
+          "description": "How many tasks did you complete? How do you feel?"
+        }
+      ]
+    },
+    "energyLog": {
+      "title": "Energy Log (Track for 2 Weeks)",
+      "subtitle": "Identify your peak productivity times",
+      "note": "Once you identify your peak times, schedule complex work (debugging, new features) during those hours."
+    },
+    "cta": {
+      "title": "Ready to Start?",
+      "subtitle": "Print this page or bookmark it. Start with Phase 1 this week. You've got this.",
+      "print": "Print This Plan",
+      "share": "Share With Accountability Partner"
+    },
+    "back": "Back",
+    "progressLabel": "tasks completed"
+  },
+  "checklist": {
+    "allCompleted": "🎉 All tasks completed! Great progress!"
+  }
+}
