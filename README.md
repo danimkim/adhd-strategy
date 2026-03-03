@@ -4,18 +4,20 @@ A practical guide and interactive toolkit for ADHD developers to overcome projec
 
 ## 🎯 Overview
 
-**ADHD Dev Strategy** is a web-based resource designed to help developers with ADHD (or similar executive function challenges) complete their projects. It combines research-backed psychological strategies, behavioral techniques, and structured execution systems into an actionable guide.
+**ADHD Strategy** is a web-based resource designed to help developers with ADHD complete their projects. The website combines research-backed psychological strategies, behavioral techniques, and structured execution systems into an actionable guide.
 
-### The Problem
+## 🌟 Why This Website Was Built
 
-Many ADHD developers experience a familiar pattern:
-- ✅ Start projects with excitement and momentum
-- ✅ Build initial features successfully  
-- ❌ Hit a wall when repetitive work begins
-- ❌ Struggle to restart after interruptions
-- ❌ Project remains incomplete despite effort
+Many ADHD developers struggle with a common challenge: starting projects is exciting, but maintaining momentum through repetitive work is difficult. Existing productivity tools often don't account for how ADHD brains work differently—they focus on willpower rather than system design.
 
-This isn't a character flaw—it's how ADHD brains are wired. With the right system, you can finish your projects.
+This website was built to bridge that gap by providing:
+- **Practical, ADHD-aware strategies** that work with your brain instead of against it
+- **Structured systems** (6-week roadmap, daily routines, weekly retros) that reduce decision fatigue
+- **Interactive tools** (checklists, progress tracking) that provide immediate feedback and motivation
+- **Multi-language support** to reach ADHD developers worldwide
+- **Research-backed content** combining psychology, behavioral science, and real developer experiences
+
+The goal is simple: help ADHD developers finish their projects by removing barriers and building sustainable momentum.
 
 ## 🚀 Features
 
@@ -178,17 +180,13 @@ MIT License - Feel free to use, modify, and distribute.
 Contributions are welcome! Areas for improvement:
 - Additional language translations
 - More strategy examples
-- Community success stories
 - Enhanced tracking features
+- UI/UX improvements
 
 ## 📧 Support
 
 For issues, questions, or suggestions, please open an issue on GitHub.
 
-## 🙏 Acknowledgments
+---
 
-This guide is based on research-backed strategies for ADHD and executive function challenges. It combines insights from:
-- ADHD psychology research
-- Productivity systems (GTD, Pomodoro, Kanban)
-- Developer community experiences
-- Behavioral science principles
+**Built to help ADHD developers finish their projects.** 🚀
