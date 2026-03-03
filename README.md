@@ -1,4 +1,4 @@
-# ADHD Dev Strategy
+# ADHD Strategy
 
 A practical guide and interactive toolkit for ADHD developers to overcome project paralysis and build sustainable momentum.
 
@@ -192,7 +192,3 @@ This guide is based on research-backed strategies for ADHD and executive functio
 - Productivity systems (GTD, Pomodoro, Kanban)
 - Developer community experiences
 - Behavioral science principles
-
----
-
-**Remember**: You can finish this. ADHD isn't a character flaw—it's a different way your brain works. With the right system, you can build momentum and complete your projects. 🚀
